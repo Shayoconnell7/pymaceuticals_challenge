@@ -2,12 +2,17 @@
 
 I have never had a very strong background in math, so I was a little worried about this homework going in. I was able to complete it, but I feel like for the later sections (correlation, linear regression, box and whisker plots), being able to complete and show the calculations did not necessarily mean I understand the how or why. 
 
+- First, I imported dependancies and read in the data from both csvs.
 
-
+- I then merged the data on Mouse ID, creating the dataframe called merged_data and displayed a preview to show the columns I would be working with.
 
 * Before beginning the analysis, check the data for any mouse ID with duplicate time points and remove any data associated with that mouse ID.
 
-
+- I first checked the number of mice by finding the len of unique Mouse IDs using .value_counts.
+- I then identified mice with duplicate data by using .loc for Mouse ID on .duplicated (searching in Mouse ID and Timepoint). 
+- This returned that the ID 'g989' contained duplicate data.
+- I printed out all data for the ID 'g989' to see for myself the duplication.
+- I created a new dataframe called cleaned_df without any data associated with the mouse 'g989' using .isin. 
 
 
 * Use the cleaned data for the remaining steps.
