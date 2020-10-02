@@ -18,6 +18,12 @@ I have never had a very strong background in math, so I was a little worried abo
 
 * Generate a summary statistics table consisting of the mean, median, variance, standard deviation, and SEM of the tumor volume for each drug regimen.
 
+- First I used .groupby for Drug Regimen on cleaned_df, storing it as drug_group.
+
+- Then I manually calculated the mean (with .mean), median (with .median), variance (with .var), standard deviation (with .std), and SEM (with .sem), storing each as its own variable.
+- I used those variables to create a new dataframe called tumor_summary.
+
+- I then used the .agg function to calculate the mean, median, variance, standard deviation, and sem again, storing the result in a variable called summary_table. 
 
 
 * Generate a bar plot using both Pandas's `DataFrame.plot()` and Matplotlib's `pyplot` that shows  the number of total mice for each treatment regimen throughout the course of the study.
