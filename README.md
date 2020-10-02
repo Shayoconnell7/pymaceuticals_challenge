@@ -8,18 +8,17 @@ I have never had a very strong background in math, so I was a little worried abo
 
 * Before beginning the analysis, check the data for any mouse ID with duplicate time points and remove any data associated with that mouse ID.
 
-- I first checked the number of mice by finding the len of unique Mouse IDs using .value_counts.
-- I then identified mice with duplicate data by using .loc for Mouse ID on .duplicated (searching in Mouse ID and Timepoint). 
+- I first checked the number of mice by finding the len of unique Mouse IDs using .value_counts on merged_data.
+- I then identified mice with duplicate data by using .loc for Mouse ID on .duplicated, searching  Mouse ID and Timepoint in merged_data. 
 - This returned that the ID 'g989' contained duplicate data.
 - I printed out all data for the ID 'g989' to see for myself the duplication.
-- I created a new dataframe called cleaned_df without any data associated with the mouse 'g989' using .isin. 
-
-
-* Use the cleaned data for the remaining steps.
-
+- I created a new dataframe called cleaned_df without any data associated with the mouse 'g989' using .isin on merged_data. 
+- I checked to be sure the drop was complete by checking the number of mice again by finding the len of unique Mouse IDs using .unique on cleaned_df.
 
 
 * Generate a summary statistics table consisting of the mean, median, variance, standard deviation, and SEM of the tumor volume for each drug regimen.
+
+
 
 * Generate a bar plot using both Pandas's `DataFrame.plot()` and Matplotlib's `pyplot` that shows  the number of total mice for each treatment regimen throughout the course of the study.
 
