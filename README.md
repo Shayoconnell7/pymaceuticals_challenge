@@ -64,10 +64,12 @@
       - I calculated the quartiles and iqr for each drug using tumor_vol and .quantile, setting the quartiles, and manually calculating iqr.
       - I printed the results for each drug treatment.
       - I set that if a given volume was greater than the upper bound of less than the lower bound it should be added to an empty list I called outliers. 
+      - I printed those calculations. 
 
+  - Outside of the for loop I calculated the qurtiles, upper/lower bounds, and iqr for the total off all drug treatments the same way as I had for them individually. 
+  - I printed those calculations.
 
   
-
 * Using Matplotlib, generate a box and whisker plot of the final tumor volume for all four treatment regimens and highlight any potential outliers in the plot by changing their color and style.
 
   **Hint**: All four box plots should be within the same figure. Use this [Matplotlib documentation page](https://matplotlib.org/gallery/pyplots/boxplot_demo_pyplot.html#sphx-glr-gallery-pyplots-boxplot-demo-pyplot-py) for help with changing the style of the outliers.
