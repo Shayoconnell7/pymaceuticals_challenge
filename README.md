@@ -88,8 +88,17 @@
   - I used .groupby Mouse ID on just_capomulin to get data for each mouse isolated.
   - I used .mean on the Tumor Volume (mm3) column of the grouped data, storing the result as avg_tumor_vol.
   - I used .mean on the Weight (g) column of the grouped data, storing the result as mouse_weight.
+  - I created a scatter plot using avg_tumor_volume as the y axis and mosue_weight as the x axis.
+  - I formatted the chart to look nice and be easily understood.
 
 * Calculate the correlation coefficient and linear regression model between mouse weight and average tumor volume for the Capomulin treatment. Plot the linear regression model on top of the previous scatter plot.
+  - I used linregress on mouse_weight and avg_tumor_vol to find the slope, intercept, rvalue, pvalue, and stderr.
+  - I multiplied mouse_weight by slope plus intercept and stored it as regress_values.
+  - I used the same scatter plot as before to show the relationship between mouse_weight and avg_tumor_vol.
+  - I calculated the correlation coefficient and stored it as cc.
+  - I calculated the r-squared valued and stored it as rsquared.
+  - I formatted the chart to look nice and be easily understood.
+
 
 * Look across all previously generated figures and tables and write at least three observations or inferences that can be made from the data. Include these observations at the top of notebook.
 
