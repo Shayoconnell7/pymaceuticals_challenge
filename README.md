@@ -35,7 +35,7 @@
   - I used .value_counts on cleaned_df for Drug Regimen and stored the results as the variable drug_counts.
   - On the matplotlib chart I used .index.values on drug_counts for the y, and .values on drug_counts for the x.
   - For the pandas .plot I did not need to set the axis. 
-  - I formatted both charts to look nice and match.
+  - I formatted both charts to look nice, be easily understood, and match.
 
 
 
@@ -44,7 +44,7 @@
   - I used .value_counts on cleaned_df for Sex and stored the results as the variable sex_counts.
   - On the matplotlib chart I used stored the counts for Male and Female as separate variables called males and females, and used them to create the list sex_nums, which I then put in the pie chart using plt.pie.
   - For the pandas .plot I did not need any additional initialization. 
-  - I formatted both charts to look nice and match.
+  - I formatted both charts to look nice, be easily understood, and match.
 
 
 
@@ -79,7 +79,8 @@
   - I chose a mouse (shown is 'u364', but I tried with several to be sure it was working properly), and set its ID equal to the variable mouse_id.
   - I found my mouse's timepoints using .loc on id_index, and stored them as the variable individual_time.
   - I found my mouse's tumor volumes using .loc on id_index, and stored them as the variable individual_volume.
-  - 
+  - I plotted individual_time as my x axis and individual_volume as my y axis.
+  - I formatted the chart to look nice and be easily understood.
 
 * Generate a scatter plot of mouse weight versus average tumor volume for the Capomulin treatment regimen.
 
