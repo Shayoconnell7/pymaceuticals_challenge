@@ -28,14 +28,17 @@ I have never had a very strong background in math, so I was a little worried abo
 
 * Generate a bar plot using both Pandas's `DataFrame.plot()` and Matplotlib's `pyplot` that shows  the number of total mice for each treatment regimen throughout the course of the study.
 
-- I used .value_counts on cleaned_df and stored the results as the variable drug_counts.
+- I used .value_counts on cleaned_df for Drug Regimen and stored the results as the variable drug_counts.
 - On the matplotlib chart I used .index.values on drug_counts for the y, and .values on drug_counts for the x.
 - For the pandas .plot I did not need to set the axis. 
 - I formatted both charts to look nice and match.
 
 * Generate a pie plot using both Pandas's `DataFrame.plot()` and Matplotlib's `pyplot` that shows the distribution of female or male mice in the study.
 
-  * **NOTE:** These plots should look identical.
+- I used .value_counts on cleaned_df for Sex and stored the results as the variable sex_counts.
+- On the matplotlib chart I used stored the counts for Male and Female as separate variables called males and females, and used them to create the list sex_nums, which I then put in the pie chart using plt.pie.
+- For the pandas .plot I did not need any additional initialization. 
+- I formatted both charts to look nice and match.
 
 * Calculate the final tumor volume of each mouse across four of the most promising treatment regimens: Capomulin, Ramicane, Infubinol, and Ceftamin. Calculate the quartiles and IQR and quantitatively determine if there are any potential outliers across all four treatment regimens.
 
