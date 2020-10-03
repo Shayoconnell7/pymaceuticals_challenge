@@ -55,6 +55,17 @@
   - I used .reset_index on max_tumor to turn it into a mergeable object.
   - I merged max_tumor with cleaned_df on Mouse ID and Timepoint, storing the result as latest_data.
 
+  - I used .unique on Drug Regimen in latest_data, storing the result as treatments (a list of the four drugs).
+  - I initialized an empty list called tumor_volume_list for plotting later.
+
+  - I used a for loop for the following:
+      - I read through latest_data using .loc for Drug Regimen, storing the Tumor Volume (mm3) invalues as tumor_vol.
+      - I added each tumor_vol value to tumor_volume_list.
+      - I calculated the quartiles and iqr for each drug using tumor_vol and .quantile, setting the quartiles, and manually calculating iqr.
+      - I printed the results for each drug treatment.
+      - I set that if a given volume was greater than the upper bound of less than the lower bound it should be added to an empty list I called outliers. 
+
+
   
 
 * Using Matplotlib, generate a box and whisker plot of the final tumor volume for all four treatment regimens and highlight any potential outliers in the plot by changing their color and style.
