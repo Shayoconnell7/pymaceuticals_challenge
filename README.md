@@ -1,6 +1,6 @@
 # pymaceuticals_challenge
 
-I have never had a very strong background in math, so I was a little worried about this homework going in. I was able to complete it, but I feel like for the later sections (correlation, linear regression, box and whisker plots), being able to complete and show the calculations did not necessarily mean I understand the how or why. 
+ I was able to complete this homework, but it was honestly pretty frustrating. The readme instructions and starter document were not at all clear, and there were a lot of places where I wasn't even sure exactly what you were asking for. When I went to my tutor, TAs, ask BCS, and the instructor for clarification, I got more uncertainty when they also didn't know, or gave me competing answers.
 
   - First, I imported dependancies and read in the data from both csvs.
 
@@ -50,10 +50,10 @@ I have never had a very strong background in math, so I was a little worried abo
 
 * Calculate the final tumor volume of each mouse across four of the most promising treatment regimens: Capomulin, Ramicane, Infubinol, and Ceftamin. Calculate the quartiles and IQR and quantitatively determine if there are any potential outliers across all four treatment regimens.
 
-  - I used .loc on the Drug Regimen column in merged_data to isolate the mice treated with each of the four drug types, and stored the result as big_four.
-  - I used .groupby on cleaned_df for Mouse ID, and used .max on the  Timepoint column of the resulting groups to find the final tumor volume for each mouse, storing the result as max_tumor.
+  - I used .groupby on cleaned_df for Drug Regimen and Mouse ID, and used .max on the Timepoint column of the resulting groups to find the final tumor volume for each mouse, storing the result as max_tumor.
+  - I used .drop on max_tumor to drop the drug treatments we did not want to look at, leaving only Capomulin, Ramicane, Infubinol, and Ceftamin.
   - I used .reset_index on max_tumor to turn it into a mergeable object.
-  - I merged max_tumor with cleaned_df on Mouse ID and Timepoint, storing the result as latest_data
+  - I merged max_tumor with cleaned_df on Mouse ID and Timepoint, storing the result as latest_data.
 
   
 
