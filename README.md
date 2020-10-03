@@ -74,8 +74,12 @@
   - I created a box and whisker plot using tumor_volume_list for the content and treatments for the labels.
 
 
-
 * Select a mouse that was treated with Capomulin and generate a line plot of tumor volume vs. time point for that mouse.
+  - I created a new dataframe called id_index from the dataframe merged_data, and set the index to Mouse ID so I could easily find data for my chosen mouse.
+  - I chose a mouse (shown is 'u364', but I tried with several to be sure it was working properly), and set its ID equal to the variable mouse_id.
+  - I found my mouse's timepoints using .loc on id_index, and stored them as the variable individual_time.
+  - I found my mouse's tumor volumes using .loc on id_index, and stored them as the variable individual_volume.
+  - 
 
 * Generate a scatter plot of mouse weight versus average tumor volume for the Capomulin treatment regimen.
 
