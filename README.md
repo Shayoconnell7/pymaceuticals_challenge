@@ -83,6 +83,11 @@
   - I formatted the chart to look nice and be easily understood.
 
 * Generate a scatter plot of mouse weight versus average tumor volume for the Capomulin treatment regimen.
+  - I used .set_index on cleaned_df to set the index to Drug Regimen, and stored it as drug_index.
+  - I used .loc for Capomulin on drug_index to pull out just the Capomulin data, storing it as just_capomulin.
+  - I used .groupby Mouse ID on just_capomulin to get data for each mouse isolated.
+  - I used .mean on the Tumor Volume (mm3) column of the grouped data, storing the result as avg_tumor_vol.
+  - I used .mean on the Weight (g) column of the grouped data, storing the result as mouse_weight.
 
 * Calculate the correlation coefficient and linear regression model between mouse weight and average tumor volume for the Capomulin treatment. Plot the linear regression model on top of the previous scatter plot.
 
